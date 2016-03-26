@@ -15,8 +15,8 @@ def havenSentiment(text):
 
 
 
-if __name__ == "__main__":
-	from twitterGrab import twitterUserGrab
-	from twitterGrab import twitterTopicGrab
-	print havenSentiment(twitterTopicGrab("python"))
-	print havenSentiment(twitterUserGrab("kanyewest"))
+# if __name__ == "__main__":
+# 	from twitterGrab import twitterUserGrab
+# 	from twitterGrab import twitterTopicGrab
+# 	print havenSentiment(twitterTopicGrab("python"))
+# 	print havenSentiment(twitterUserGrab("kanyewest"))
