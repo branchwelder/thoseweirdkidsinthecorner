@@ -18,7 +18,7 @@ def draw_snowflake(sentiment):
 
     for blah in turtles:
         blah.speed(0)
-        blah.tracer(100)
+        blah.tracer(1000000)
         blah.pensize(2)
 
     # Make all the turtles point in the right directions
@@ -48,8 +48,12 @@ def draw_snowflake(sentiment):
             blah.right(turn)
             blah.forward(length)
 
-    ts.getcanvas().postscript(file="duck.eps")
+    ts.getcanvas().postscript(file="static/duck.eps")
+
+    child = SP.Popen("mogrify -format jpg static/duck.eps", shell=True)
+
     turtle.done()
+    turtle.bye()
 
 
 if __name__ == "__main__":

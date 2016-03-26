@@ -1,8 +1,9 @@
 $(document).ready(function(){
 
   var onSuccess = function(stuff, status) {
+    console.log("Hello");
     $("#fractal").empty();
-    $('#fractal').prepend('<img id="fractal" src="duck.eps" />')
+    $('#fractal').prepend('<img id="fractal" href="static/duck.png" />')
   };
 
   var onError = function(data, status) {

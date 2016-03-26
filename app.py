@@ -17,25 +17,25 @@ def get_results():
 	source = request.form["source"].encode('utf-8')
 	tu = request.form["tu"].encode('utf-8')
 
-	# if source == "facebook":
-	# 	print "facebook"
-	# 	sentiment = facebookGrab(topic)
-	# elif (source == "twitter" and tu == "user"):
-	# 	print "twitter user"
-	# 	sentiment = twitterUserGrab(topic)
-	# elif (source == "twitter" and tu == "topic"):
-	# 	print "twitter topic"
-	# 	sentiment = twitterTopicGrab(topic)
-	# elif source == "reddit":
-	# 	print "reddit"
-	# 	sentiment = posts_about(topic)
-	# else:
-	# 	sentiment = 0
+	if source == "facebook":
+		print "facebook"
+		sentiment = facebookGrab(topic)
+	elif (source == "twitter" and tu == "user"):
+		print "twitter user"
+		sentiment = twitterUserGrab(topic)
+	elif (source == "twitter" and tu == "topic"):
+		print "twitter topic"
+		sentiment = twitterTopicGrab(topic)
+	elif source == "reddit":
+		print "reddit"
+		sentiment = posts_about(topic)
+	else:
+		sentiment = 0
 
-	sentiment = 0
 
 	draw_snowflake(sentiment)
-	time.sleep(2)
+	
+	time.sleep(1)
 
 	return jsonify({"hi":"helellelle"})
 
