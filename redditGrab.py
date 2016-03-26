@@ -1,4 +1,4 @@
-def posts_about(about, limit=100, subreddit='politics'):
+def posts_about(about, limit=100, subreddit='all'):
 	"""Uses a Reddit wrapper to access the top posts on a particular topic and the resulting comments.
 	It then runs sentiment analysis on those comments and averages them. This function returns one number
 	indicating the subjectivity of the comments."""
