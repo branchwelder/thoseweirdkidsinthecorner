@@ -19,7 +19,7 @@ for blah in turtles:
     blah.tracer(100000)
     blah.pensize(2)
 
-# Make all the turtles point in the right direction
+# Make all the turtles point in the right directions
 b.left(45)
 c.left(90)
 d.left(135)
@@ -30,18 +30,16 @@ h.left(315)
 
 turn = random.randrange(0, 361)
 
-for i in range(random.randrange(0, 1000)):
-    turn = random.randrange(0, 10)
-    length = random.randrange(0, 10)
+for i in range(random.randrange(0, 200)):
+    turn = random.randrange(0, 20)
+    length = random.randrange(0, 20)
     for blah in turtles:
         blah.right(turn)
         blah.forward(length)
 
-for blah in turtles:
-    blah.forward(400)
 
 for i in range(random.randrange(0, 1000)):
-    turn = random.randrange(0, 361)
+    turn = -1 * random.randrange(0, 361)
     length = random.randrange(0, 20)
     for blah in turtles:
         blah.right(turn)
