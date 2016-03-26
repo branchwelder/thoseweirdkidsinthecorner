@@ -1,4 +1,7 @@
-"""run <sudo pip install twython> before use"""
+"""run <sudo pip install twython> before use. Gather Twitter app key, app secret, oauth token, and token secret and set them to environment
+variables using: <export APP_KEY= 'your key'>, <export APP_SECRET='your secret'>, <export OAUTH_TOKEN='your token'>,
+ and <export OAUTH_TOKEN_SECRET='your token secret'> in the command line"""
+
 def twitterTopicGrab(topic=None):
 	from twython import Twython
 	from index import havenSentiment 

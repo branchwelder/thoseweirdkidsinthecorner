@@ -1,4 +1,5 @@
-"""Run <pip install git+https://github.com/HPE-Haven-OnDemand/havenondemand-python> in the command console before use."""
+"""Run <pip install git+https://github.com/HPE-Haven-OnDemand/havenondemand-python> in the command console before use. Then,
+create an environment variable using: <export havenAPI='your key'> in the command line."""
 def havenSentiment(text):	
 	"""Takes a string as an input and runs it through the Haven API to gather sentiment analysis and returns it"""
 	from havenondemand.hodindex import HODClient

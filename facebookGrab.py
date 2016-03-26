@@ -1,5 +1,6 @@
 
 def facebookGrab(profile):
+	"""Get an access token from facebook and run: <export facebookAcessToken = 'your token'> in the command line."""
 	import facebook
 	import requests
 	import os
