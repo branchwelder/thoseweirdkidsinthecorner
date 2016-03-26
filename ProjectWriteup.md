@@ -1,0 +1,19 @@
+## Inspiration
+We each delved into various interest areas and for members of our team and formed an idea that was modular, included the collective ideas of most of our team, and resulted in a thought-provoking tool for users. We all have a hearty appreciation for data analytics, particularly visualizing it, so this project ended up coming from the question: "how many different sources of data can we visualize in a fun way?" The answer was MandelThought.
+## What it does
+MandelThought takes in various data sources and creates unique fractal art centered around the sentiment of the source. Sources include Facebook, Twitter, Reddit, user generated audio, and that list may increase as we work on MandelThought in the future.
+## How we built it
+We wanted to make MandelThought as modular as possible, especially in the data side. To that end, we made integrating new data sources fairly easy, in that you only need to add the file that uses the API you're adding. Extras have to be individually added to the webapp portion, but that is unavoidable given our timeframe. The data we gathered from the various sites was analyzed by the Haven text analysis API. From there, we built a fractal art generation tool using Turtle and adjusted various fractal formation values based on the sentiment. The idea was to have negative emotion be more angular and sharp, while more happy, positive emotion would be represented with softer curves. We spent a huge amount of time trying to get heart rate data using a phone camera so we could add user mood to our calculations, but we ended up being unable to do that due to security measures. We did, however, manage to pull heartbeat data off the phone camera using the changes in red values in the camera image, which corresponds to heartbeat.
+## Challenges we ran into:
+A main challenge we ran into was trying to get pulse data. This was going to be one of our data sources, and we went through many methods that almost worked. Each of these were attempted:
+- creatively using Myo armband (around bicep instead of forearm), very briefly worked
+- using a fitbit, the model we had didn't have pulse data
+- distilling an energy drink with significant amounts of table salt in order to make an electrocunductuve syrup in order to attach electrodes to the body, which probably would have worked if we had been allowed to attempt it.
+- creatively using a Muse headset (around upper left side of torso instead of forehead), would have worked if there hadn't been complications with bluetooth
+- retrieving variations in blood in fingertip with a smartphone camera, actually consistently works
+## Accomplishments that we're proud of
+The working fractal art generator that functions in tandem with sentiment analysis on various text sources was a huge accomplishment for us. Getting that online is an ongoing problem, but one we plan to solve before hacking ends. Our explorations for ideas about this project were outrageous and fantastic, and even though most of them fell through, the parts that stuck worked together to make our project a convoluted masterpiece in our eyes. Managing to pull real heartrate data off of an average android smartphone, using just the differences in red scale, was an incredible accomplishment, even if it couldn't be implemented directly into the project due to circumstances outside our control.
+## What we learned
+We learned how to chain APIs together, gather data from strange, often ridiculous places, the noticeable difference between Pattern for sentiment analysis and the far superior Haven API for sentiment analysis, and the wonders of personalized fractal art.
+## What's next for MandelThought
+We're going to try the energy drink distillation when we get back to Olin, and we're also planning on adding more data sources like a functional EKG with the materials we have available to us.
