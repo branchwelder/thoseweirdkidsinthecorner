@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Subjective?</title>
+    <title>Mandelthought</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
@@ -11,15 +11,27 @@
   </head>
   <body>
     <div class="container form-container">
-      <div class="col-sm-6"><br><span class="middle" style="color:#586e75">Mandel-thought</span></div>
-      <div class="col-sm-6">
+      <div class="col-sm-2"><br><span class="middle" style="color:#586e75">Mandel-thought</span></div>
+      <div class="col-sm-10">
         <form class="navbar-form navbar-right" role="search" id="searchTopic">
-          <input type="text" name="topic" id="topic" class="form-control inputform" placeholder="Topic">
+          <label for="sel1">Select Sentiment Source:</label>
+          <select class="form-control inputform" id="sel1" name="source">
+            <option value="facebook">Facebook (User Only)</option>
+            <option value="twitter">Twitter (User or Topic)</option>
+            <option value="reddit">Reddit (Topic Only)</option>
+          </select>
+          <label for="sel2">Topic or User:</label>
+          <select class="form-control inputform" id="sel2" name="tu">
+            <option value="topic">Topic</option>
+            <option value="user">User</option>
+          </select>
+          <input type="text" name="topic" id="topic" class="form-control inputform" placeholder="Topic or User">
           <button type="submit" class="btn searchbutton">Search</button>
         </form>
       </div>
     </div>
     <br>
+    <div id="fractal"></div>
 
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script type="text/javascript" src="static/subjective.js"></script>

@@ -8,12 +8,20 @@ def facebookGrab(profile):
 	import json
 
 	results = []
-	access_token = os.environ.get('facebookAcessToken')
+	access_token = os.environ.get('facebookAcessToken')	
 	user = profile
-
 	graph = facebook.GraphAPI(access_token)
+	app_id = os.environ.get('facebookAppId')
+	app_secret = os.environ.get('facebookAppSecret')
+
+
+	# Extend the expiration time of a valid OAuth access token.
+	# extendedAccessToken = graph.extend_access_token(app_id, app_secret)
+	# print extendedAccessToken
 	profile = graph.get_object(user)
 	posts = graph.get_connections(profile['id'], 'posts')
+
+
 
 	# Wrap this block in a while loop so we can keep paginating requests until
 	# finished.

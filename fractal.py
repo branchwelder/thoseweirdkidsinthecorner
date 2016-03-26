@@ -2,7 +2,7 @@ def draw_snowflake(sentiment):
     from Tkinter import *
     import turtle
     import random
-
+    sentiment +=1
     # Create the turtles
     a = turtle.Turtle()
     b = turtle.Turtle()
@@ -18,7 +18,7 @@ def draw_snowflake(sentiment):
 
     for blah in turtles:
         blah.speed(0)
-        blah.tracer(100)
+        blah.tracer(1000000)
         blah.pensize(2)
 
     # Make all the turtles point in the right directions
@@ -34,7 +34,7 @@ def draw_snowflake(sentiment):
 
 
     for i in range(random.randrange(0, 200)): #this should be lower with positive sentiment
-        turn = random.randrange(0, 360) #this should be lower with positive sentiment
+        turn = random.randrange(0, round(360/(sentiment*10))) #this should be lower with positive sentiment
         length = random.randrange(0, 30) #this should be higher with positive sentiment
         for blah in turtles:
             blah.right(turn)
@@ -42,11 +42,19 @@ def draw_snowflake(sentiment):
 
 
     for i in range(random.randrange(0, 1000)): #this should be lower with positive sentiment
-        turn = -1 * random.randrange(0, 361) #this should be lower with positive sentiment
+        turn = -1 * random.randrange(0, round(361/(sentiment*10))) #this should be lower with positive sentiment
         length = random.randrange(0, 30) #this should be higher with positive sentiment
         for blah in turtles:
             blah.right(turn)
             blah.forward(length)
 
-    ts.getcanvas().postscript(file="duck.eps")
+    ts.getcanvas().postscript(file="static/duck.eps")
+
+    child = SP.Popen("mogrify -format jpg static/duck.eps", shell=True)
+
     turtle.done()
+    turtle.bye()
+
+
+if __name__ == "__main__":
+    print draw_snowflake(-0.2)
