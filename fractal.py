@@ -49,11 +49,10 @@ def draw_snowflake(sentiment):
             blah.forward(length)
 
     ts.getcanvas().postscript(file="static/duck.eps")
-
-    child = SP.Popen("mogrify -format jpg static/duck.eps", shell=True)
-
+    
     turtle.done()
-    turtle.bye()
+
+    turtle.exitonclick()
 
 
 if __name__ == "__main__":
